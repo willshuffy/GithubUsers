@@ -8,7 +8,7 @@
     tools:context=".SplashScreenActivity">
     
     <ImageView
-        android:id="@+id/apps_logo"
+        android:id="@+id/iv_logo"
         android:layout_width="106dp"
         android:layout_height="106dp"
         android:layout_marginTop="258dp"
@@ -18,20 +18,20 @@
         android:src="@drawable/apps_logo"/>
 
     <TextView
-        android:id="@+id/text_logo"
+        android:id="@+id/tv_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="GithubUsers"
         android:fontFamily="@font/montserrat_bold"
         android:textColor="@color/colorWhite"
         android:textSize="21sp"
-        app:layout_constraintTop_toBottomOf="@id/apps_logo"
+        app:layout_constraintTop_toBottomOf="@id/iv_logo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="12dp"/>
     
     <ImageView
-        android:id="@+id/desc_img"
+        android:id="@+id/iv_desc"
         android:layout_width="117dp"
         android:layout_height="37dp"
         android:src="@drawable/text_desc"
