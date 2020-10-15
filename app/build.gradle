@@ -48,4 +48,7 @@ dependencies {
     }
     implementation 'com.github.dhaval2404:imagepicker-support:1.5'
     implementation 'de.hdodenhof:circleimageview:3.0.0'
+
+    //cardview
+    implementation 'androidx.cardview:cardview:1.0.0'
 }
