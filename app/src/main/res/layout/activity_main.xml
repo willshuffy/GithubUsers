@@ -75,8 +75,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="GithubUsers"
-        android:textSize="14sp"
-        android:fontFamily="@font/montserrat_bold"
+        android:textSize="11sp"
+        android:fontFamily="@font/montserrat_medium"
         android:textColor="@color/colorWhite"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -85,12 +85,12 @@
 
     <ImageView
         android:id="@+id/iv_logo"
-        android:layout_width="52dp"
-        android:layout_height="52dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:src="@drawable/github_white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/view_circle"
-        android:layout_marginBottom="12dp"/>
+        android:layout_marginBottom="13dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
