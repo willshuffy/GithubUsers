@@ -100,7 +100,7 @@
         <item>10</item>
     </string-array>
 
-    <string-array name="data_profpict">
+    <array name="data_profpict">
         <item>@drawable/jakewharton_image</item>
         <item>@drawable/amitshekhariitbhu_img</item>
         <item>@drawable/romainguy_img</item>
@@ -111,6 +111,6 @@
         <item>@drawable/budioktaviyan_img</item>
         <item>@drawable/hendisantika_img</item>
         <item>@drawable/sidiqpermana_img</item>
-    </string-array>
+    </array>
     
 </resources>
