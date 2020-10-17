@@ -8,7 +8,11 @@
     <string name="lives">Lives</string>
     <string name="company">Company</string>
     <string name="name">Name</string>
-    
+    <string name="exit">Exit</string>
+    <string name="yakin__keluar">Anda Yakin Ingin Keluar</string>
+    <string name="iya">Ya</string>
+    <string name="tidak">Tidak</string>
+
     <string-array name="data_username">
         <item>JakeWharton</item>
         <item>amitshekhariitbhu</item>

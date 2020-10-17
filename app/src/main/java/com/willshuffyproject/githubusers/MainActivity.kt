@@ -2,13 +2,17 @@ package com.willshuffyproject.githubusers
 
 import android.content.Intent
 import android.content.res.TypedArray
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.MenuItem
+import android.view.View
 import android.view.animation.AnimationUtils
 import android.widget.AdapterView
-import android.widget.ListView
-import android.widget.Toast
+import android.widget.PopupMenu
+import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.exit_dialog.view.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -65,6 +69,15 @@ class MainActivity : AppCompatActivity() {
             intentData.putExtra(DetailActivity.KEY_USER, intentDataUser)
             startActivity(intentData)
         }
+
+
+        iv_back.setOnClickListener{
+            onBackPressed()
+        }
+
+        iv_menu.setOnClickListener {
+            showPopUp(iv_menu)
+        }
     }
 
     private fun addItem(){
@@ -96,5 +109,59 @@ class MainActivity : AppCompatActivity() {
         dataFollower = resources.getStringArray(R.array.data_follower)
         dataFollowing = resources.getStringArray(R.array.data_following)
 
+    }
+
+    private fun showPopUp(view: View){
+
+        val popup = PopupMenu(this, view)
+        popup.inflate(R.menu.main_menu)
+
+        popup.setOnMenuItemClickListener(PopupMenu.OnMenuItemClickListener { item: MenuItem? ->
+
+            when (item!!.itemId){
+
+                R.id.action_exit -> {
+
+                    val view = LayoutInflater.from(this).inflate(R.layout.exit_dialog, null)
+                    val alert = AlertDialog.Builder(this, R.style.CustomAlertDialog)
+                        .setView(view)
+                        .setCancelable(false)
+
+                    val mAlertDialog = alert.show()
+                    mAlertDialog?.window?.setLayout(700, 500)
+
+                    view.btn_iya.setOnClickListener{
+                        finishAffinity()
+                    }
+                    view.btn_tidak.setOnClickListener {
+                        mAlertDialog.dismiss()
+                    }
+                }
+            }
+            true
+        })
+        popup.show()
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
+
+    override fun onBackPressed() {
+        val view = LayoutInflater.from(this).inflate(R.layout.exit_dialog, null)
+        val alert = AlertDialog.Builder(this, R.style.CustomAlertDialog)
+            .setView(view)
+            .setCancelable(false)
+
+        val mAlertDialog = alert.show()
+        mAlertDialog?.window?.setLayout(700, 500)
+
+        view.btn_iya.setOnClickListener{
+            finishAffinity()
+        }
+        view.btn_tidak.setOnClickListener {
+            mAlertDialog.dismiss()
+        }
     }
 }
