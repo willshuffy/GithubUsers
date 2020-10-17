@@ -39,7 +39,8 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="69dp"/>
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/iv_profpict"
         android:layout_width="130dp"
         android:layout_height="130dp"
@@ -94,6 +95,7 @@
             android:gravity="center">
 
             <TextView
+                android:id="@+id/tv_follower"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="20"
@@ -119,12 +121,13 @@
             android:gravity="center">
 
             <TextView
+                android:id="@+id/tv_following"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
                 android:text="150"
                 android:textColor="@color/colorWhite"
-                android:textSize="18sp"
-                android:fontFamily="@font/montserrat_bold"/>
+                android:textSize="18sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -144,6 +147,7 @@
             android:gravity="center">
 
             <TextView
+                android:id="@+id/tv_repository"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="84"
@@ -172,10 +176,9 @@
         android:textSize="14sp"
         android:fontFamily="@font/montserrat_semibold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="38dp"
-        android:layout_marginStart="86dp"/>
+        android:layout_marginStart="80dp"/>
 
     <TextView
         android:id="@+id/tv_location_icon"
@@ -186,10 +189,9 @@
         android:textSize="16sp"
         android:fontFamily="@font/montserrat_bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/tv_location"
         android:layout_marginBottom="4dp"
-        android:layout_marginStart="52dp"
+        android:layout_marginStart="45dp"
         android:drawableStart="@drawable/location"
         android:drawablePadding="16dp"
         />
@@ -203,10 +205,9 @@
         android:textSize="14sp"
         android:fontFamily="@font/montserrat_semibold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/tv_location_icon"
         android:layout_marginBottom="20dp"
-        android:layout_marginStart="86dp"/>
+        android:layout_marginStart="80dp"/>
 
     <TextView
         android:id="@+id/tv_company_icon"
@@ -217,10 +218,9 @@
         android:textSize="16sp"
         android:fontFamily="@font/montserrat_bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/tv_company"
         android:layout_marginBottom="4dp"
-        android:layout_marginStart="52dp"
+        android:layout_marginStart="45dp"
         android:drawableStart="@drawable/office_block"
         android:drawablePadding="16dp"
         />
@@ -234,10 +234,9 @@
         android:textSize="14sp"
         android:fontFamily="@font/montserrat_semibold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/tv_company_icon"
         android:layout_marginBottom="20dp"
-        android:layout_marginStart="86dp"/>
+        android:layout_marginStart="80dp"/>
 
     <TextView
         android:id="@+id/tv_name_icon"
@@ -248,10 +247,9 @@
         android:textSize="16sp"
         android:fontFamily="@font/montserrat_bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/tv_name_data"
         android:layout_marginBottom="4dp"
-        android:layout_marginStart="52dp"
+        android:layout_marginStart="45dp"
         android:drawableStart="@drawable/user"
         android:drawablePadding="16dp"
         />

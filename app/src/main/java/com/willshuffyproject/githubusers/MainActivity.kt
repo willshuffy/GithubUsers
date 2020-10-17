@@ -1,5 +1,6 @@
 package com.willshuffyproject.githubusers
 
+import android.content.Intent
 import android.content.res.TypedArray
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -48,7 +49,21 @@ class MainActivity : AppCompatActivity() {
         addItem()
 
         lv_user.onItemClickListener = AdapterView.OnItemClickListener{_, _, position, _ ->
-            Toast.makeText(this@MainActivity, users[position].name, Toast.LENGTH_SHORT).show()
+            //Toast.makeText(this@MainActivity, users[position].name, Toast.LENGTH_SHORT).show()
+            val intentDataUser = User(
+                users[position].username,
+                users[position].name,
+                users[position].profpict,
+                users[position].company,
+                users[position].location,
+                users[position].repository,
+                users[position].follower,
+                users[position].following
+            )
+
+            val intentData = Intent(this@MainActivity, DetailActivity::class.java)
+            intentData.putExtra(DetailActivity.KEY_USER, intentDataUser)
+            startActivity(intentData)
         }
     }
 
