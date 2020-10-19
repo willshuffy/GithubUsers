@@ -26,7 +26,7 @@ import kotlinx.android.synthetic.main.activity_splash_screen.*
         tv_logo.startAnimation(text_logo)
         iv_desc.startAnimation(desc_img)
 
-        var handler = Handler()
+        val handler = Handler()
         handler.postDelayed({
             val intent = Intent(this@SplashScreenActivity,
                 MainActivity::class.java)

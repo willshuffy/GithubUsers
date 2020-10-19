@@ -30,7 +30,7 @@ class UserAdapter constructor(private val context: Context): BaseAdapter() {
        internal fun bind(user: User){
             with(view){
                 tv_name.text = user.name
-                tv_username.text ="@" + user.username
+                tv_username.text = StringBuilder("@" + user.username)
                 Glide.with(view.context)
                     .load(user.profpict)
                     .apply(RequestOptions().override(50, 50))

@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
         addItem()
 
         lv_user.onItemClickListener = AdapterView.OnItemClickListener{_, _, position, _ ->
-            //Toast.makeText(this@MainActivity, users[position].name, Toast.LENGTH_SHORT).show()
+
             val intentDataUser = User(
                 users[position].username,
                 users[position].name,
@@ -66,7 +66,7 @@ class MainActivity : AppCompatActivity() {
             )
 
             val intentData = Intent(this@MainActivity, DetailActivity::class.java)
-            intentData.putExtra(DetailActivity.KEY_USER, intentDataUser)
+            intentData.putExtra(DetailActivity.KEY_USER, users[position])
             startActivity(intentData)
         }
 
