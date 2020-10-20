@@ -15,6 +15,10 @@
         alt="Detail Screen"    
         style="margin-right: 20px;"    
         width="200" />
+    <img src="assets/app_demo.gif?raw=true"
+        alt="Demo Screen Action GIF"    
+        style="margin-right: 20px;"    
+        width="200" />
 </p>
 
 ## Author
