@@ -3,15 +3,15 @@
 
 ## Preview
 <p align="center">
-    <img src="assets/splash.png"
+    <img src="assets/app_splash.png"
         alt="Search Screen Waiting"    
         style="margin-right: 10px;"    
         width="200" />
-    <img src="assets/listview.png"
+    <img src="assets/app_listview.png"
         alt="Search Screen Loaded"    
         style="margin-right: 10px;"    
         width="200" />
-    <img src="assets/detail.png"
+    <img src="assets/app_detail.png"
         alt="Search Screen Error"    
         style="margin-right: 10px;"    
         width="200" />
